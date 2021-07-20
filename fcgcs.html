@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>무료 문상 사이트</title>
+        <style>
+            #div1 {
+                margin: auto;
+                text-align: center;
+                border: 5px solid black;
+                border-radius: 50%;
+                width: 300px;
+                height: 200px;
+                padding-top: 100px;
+                font-size: 60px;
+                user-select: none;
+                margin-top: 200px;
+                margin-bottom: 50px;
+            }
+            #div2 {
+                text-align: center;
+                font-size: 16px;
+            }
+            span {
+                color: red;
+            }
+            @media screen and (max-device-width: 480px) {
+                #div1 {
+                border: 12px solid black;
+                width: 500px;
+                height: 320px;
+                padding-top: 180px;
+                font-size: 100px;
+                margin-top: 400px;
+                margin-bottom: 100px;
+            }
+                #div2 {
+                    font-size: 30px;
+                }
+            }
+        </style>
+        <script>
+            var number = 0;
+            function OnClick() {
+                number += 1;
+                document.getElementById("div1").innerHTML = number;
+                if (number >= 999999999) {
+                    document.getElementById("div1").innerHTML = "뻥이지롱!";
+                    document.getElementById("div2").innerHTML = "원을 클릭해 999999999를 만드세요!<br>그러면 문화상품권 번호를 <span>알려드리지 않습니다!</span>";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id=div1 onclick='OnClick()'>0</div>
+        <div id=div2>원을 클릭해 999999999를 만드세요!<br>그러면 문화상품권 번호를 알려드립니다!</div>
+    </body>
+</html>
